@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Yashz Mart - Watches</title>
+    <link rel="stylesheet" href="capstyles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Yashz Mart</h1>
+        <p>Welcome to our online watch store</p>
+    </header>
+
+
+    <!-- CART -->
+    <div class="cart-container">
+
+        <h2>🛒 My Cart</h2>
+
+        <div id="cart-items">
+            <p>Your cart is empty.</p>
+        </div>
+
+        <h3 id="cart-total">Total: ₹0</h3>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
+    <div class="product-container">
+
+
+        <!-- SAFEHER WATCH -->
+        <div class="product-card">
+
+            <img src="aaaa.png" alt="SAFEHER Watch">
+
+            <div class="product-details">
+
+                <h2>SAFEHER Watch</h2>
+
+                <p class="price">₹599</p>
+
+                <p class="description">
+                    Stylish and comfortable watch suitable
+                    for everyday use.
+                </p>
+
+                <h3>Features:</h3>
+
+                <ul>
+                    <li>Stylish design</li>
+                    <li>Comfortable strap</li>
+                    <li>Easy to use</li>
+                    <li>Durable body</li>
+                    <li>Suitable for daily use</li>
+                </ul>
+
+                <button class="buy-btn"
+                    onclick="addToCart('SAFEHER Watch', 599)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SMART WATCH -->
+        <div class="product-card">
+
+            <img src="smart watch.jpg" alt="Smart Watch">
+
+            <div class="product-details">
+
+                <h2>Smart Watch</h2>
+
+                <p class="price">₹1,499</p>
+
+                <p class="description">
+                    Modern smartwatch with useful smart
+                    features for everyday activities.
+                </p>
+
+                <h3>Features:</h3>
+
+                <ul>
+                    <li>Touch screen</li>
+                    <li>Fitness tracking</li>
+                    <li>Heart rate monitoring</li>
+                    <li>Bluetooth connectivity</li>
+                    <li>Long battery life</li>
+                </ul>
+
+                <button class="buy-btn"
+                    onclick="addToCart('Smart Watch', 1499)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- DIGITAL WATCH -->
+        <div class="product-card">
+
+            <img src="digital.jpg" alt="Digital Watch">
+
+            <div class="product-details">
+
+                <h2>Digital Watch</h2>
+
+                <p class="price">₹799</p>
+
+                <p class="description">
+                    Simple digital watch with a clear display
+                    and comfortable design.
+                </p>
+
+                <h3>Features:</h3>
+
+                <ul>
+                    <li>Digital display</li>
+                    <li>Alarm function</li>
+                    <li>Stopwatch</li>
+                    <li>Water resistant</li>
+                    <li>Comfortable strap</li>
+                </ul>
+
+                <button class="buy-btn"
+                    onclick="addToCart('Digital Watch', 799)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ANALOG WATCH -->
+        <div class="product-card">
+
+            <img src="analog.jpg" alt="Analog Watch">
+
+            <div class="product-details">
+
+                <h2>Analog Watch</h2>
+
+                <p class="price">₹999</p>
+
+                <p class="description">
+                    Classic analog watch with an elegant design
+                    for everyday and formal use.
+                </p>
+
+                <h3>Features:</h3>
+
+                <ul>
+                    <li>Classic analog display</li>
+                    <li>Elegant design</li>
+                    <li>Comfortable strap</li>
+                    <li>Durable body</li>
+                    <li>Suitable for formal wear</li>
+                </ul>
+
+                <button class="buy-btn"
+                    onclick="addToCart('Analog Watch', 999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- RADO WATCH -->
+        <div class="product-card">
+
+            <img src="rado.webp" alt="Rado Watch">
+
+            <div class="product-details">
+
+                <h2>Rado Watch</h2>
+
+                <p class="price">₹25,999</p>
+
+                <p class="description">
+                    Premium-style watch with an elegant and
+                    sophisticated appearance.
+                </p>
+
+                <h3>Features:</h3>
+
+                <ul>
+                    <li>Premium design</li>
+                    <li>Elegant appearance</li>
+                    <li>Durable construction</li>
+                    <li>Comfortable to wear</li>
+                    <li>Suitable for special occasions</li>
+                </ul>
+
+                <button class="buy-btn"
+                    onclick="addToCart('Rado Watch', 25999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ROLEX WATCH -->
+        <div class="product-card">
+
+            <img src="rolex.webp" alt="Rolex Watch">
+
+            <div class="product-details">
+
+                <h2>Rolex Watch</h2>
+
+                <p class="price">₹35,999</p>
+
+                <p class="description">
+                    Luxury-style watch with a sophisticated
+                    design and premium appearance.
+                </p>
+
+                <h3>Features:</h3>
+
+                <ul>
+                    <li>Luxury design</li>
+                    <li>Premium appearance</li>
+                    <li>Durable construction</li>
+                    <li>Elegant finish</li>
+                    <li>Suitable for formal occasions</li>
+                </ul>
+
+                <button class="buy-btn"
+                    onclick="addToCart('Rolex Watch', 35999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- TITAN WATCH -->
+        <div class="product-card">
+
+            <img src="titan.webp" alt="Titan Watch">
+
+            <div class="product-details">
+
+                <h2>Titan Watch</h2>
+
+                <p class="price">₹2,499</p>
+
+                <p class="description">
+                    Elegant everyday watch with a stylish
+                    and comfortable design.
+                </p>
+
+                <h3>Features:</h3>
+
+                <ul>
+                    <li>Elegant design</li>
+                    <li>Comfortable strap</li>
+                    <li>Clear dial</li>
+                    <li>Durable body</li>
+                    <li>Suitable for daily use</li>
+                </ul>
+
+                <button class="buy-btn"
+                    onclick="addToCart('Titan Watch', 2499)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOSSIL WATCH -->
+        <div class="product-card">
+
+            <img src="fossil.webp" alt="Fossil Watch">
+
+            <div class="product-details">
+
+                <h2>Fossil Watch</h2>
+
+                <p class="price">₹5,999</p>
+
+                <p class="description">
+                    Stylish fashion watch with a modern
+                    and premium-looking design.
+                </p>
+
+                <h3>Features:</h3>
+
+                <ul>
+                    <li>Modern design</li>
+                    <li>Premium finish</li>
+                    <li>Comfortable strap</li>
+                    <li>Durable body</li>
+                    <li>Suitable for casual wear</li>
+                </ul>
+
+                <button class="buy-btn"
+                    onclick="addToCart('Fossil Watch', 5999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- APPLE WATCH -->
+        <div class="product-card">
+
+            <img src="apple.webp" alt="Apple Watch">
+
+            <div class="product-details">
+
+                <h2>Apple Watch</h2>
+
+                <p class="price">₹29,999</p>
+
+                <p class="description">
+                    Modern smartwatch with a bright display
+                    and useful fitness features.
+                </p>
+
+                <h3>Features:</h3>
+
+                <ul>
+                    <li>Touch screen</li>
+                    <li>Fitness tracking</li>
+                    <li>Bluetooth connectivity</li>
+                    <li>Health and activity features</li>
+                    <li>Smart notifications</li>
+                </ul>
+
+                <button class="buy-btn"
+                    onclick="addToCart('Apple Watch', 29999)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- JAVASCRIPT FOR CART -->
+    <script>
+
+        let cart = [];
+
+
+        function addToCart(productName, price) {
+
+            let existingProduct = cart.find(
+                item => item.name === productName
+            );
+
+
+            if (existingProduct) {
+
+                existingProduct.quantity++;
+
+            } else {
+
+                cart.push({
+                    name: productName,
+                    price: price,
+                    quantity: 1
+                });
+
+            }
+
+
+            displayCart();
+
+        }
+
+
+        function displayCart() {
+
+            let cartItems = document.getElementById("cart-items");
+            let cartTotal = document.getElementById("cart-total");
+
+
+            cartItems.innerHTML = "";
+
+
+            if (cart.length === 0) {
+
+                cartItems.innerHTML =
+                    "<p>Your cart is empty.</p>";
+
+                cartTotal.textContent = "Total: ₹0";
+
+                return;
+            }
+
+
+            let total = 0;
+
+
+            cart.forEach(function(item, index) {
+
+                let itemTotal = item.price * item.quantity;
+
+                total = total + itemTotal;
+
+
+                let cartItem = document.createElement("div");
+
+                cartItem.className = "cart-item";
+
+
+                cartItem.innerHTML = `
+                    <span>
+                        <strong>${item.name}</strong>
+                        <br>
+                        ₹${item.price} × ${item.quantity}
+                    </span>
+
+                    <button onclick="removeFromCart(${index})">
+                        Remove
+                    </button>
+                `;
+
+
+                cartItems.appendChild(cartItem);
+
+            });
+
+
+            cartTotal.textContent = "Total: ₹" + total;
+
+        }
+
+
+        function removeFromCart(index) {
+
+            cart.splice(index, 1);
+
+            displayCart();
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
