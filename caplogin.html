@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Yashz Mart - Login</title>
+    <link rel="stylesheet" href="capstyles.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <h1 class="shop-name">Yashz Mart</h1>
+
+        <p class="welcome-text">
+            Welcome to Yashz Mart
+        </p>
+
+        <hr>
+
+        <h2>Login</h2>
+
+        <div class="login-form">
+
+            <label>Email ID:</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label>Password:</label>
+            <input type="password" id="password" placeholder="Enter your password">
+
+            <div class="button-group">
+
+                <button type="button"
+                        class="login-btn"
+                        onclick="login()">
+                    Login
+                </button>
+
+                <button type="button"
+                        class="cancel-btn"
+                        onclick="cancelLogin()">
+                    Cancel
+                </button>
+
+            </div>
+
+            <p id="message"></p>
+
+        </div>
+
+        <hr>
+
+        <p class="account-text">
+            Don't have an account?
+        </p>
+
+        <button type="button"
+                class="signin-btn"
+                onclick="signIn()">
+            Sign In
+        </button>
+
+    </div>
+
+
+    <script>
+
+        function login() {
+
+            let email =
+                document.getElementById("email").value;
+
+            let password =
+                document.getElementById("password").value;
+
+            let message =
+                document.getElementById("message");
+
+
+            let savedEmail =
+                localStorage.getItem("email");
+
+            let savedPassword =
+                localStorage.getItem("password");
+
+
+            if (savedEmail === null) {
+
+                savedEmail =
+                    "yasminss2107@gmail.com";
+
+                savedPassword =
+                    "12345";
+            }
+
+
+            if (email === savedEmail &&
+                password === savedPassword) {
+
+                message.textContent =
+                    "Login Successful";
+
+                message.style.color =
+                    "green";
+
+
+                setTimeout(function() {
+
+                    window.location.href =
+                        "capafterlogin.html";
+
+                }, 1000);
+
+
+            } else {
+
+                message.textContent =
+                    "Login Failed";
+
+                message.style.color =
+                    "red";
+            }
+        }
+
+
+        function signIn() {
+
+            let newEmail =
+                prompt("Enter your email ID:");
+
+
+            if (newEmail === null ||
+                newEmail === "") {
+
+                return;
+            }
+
+
+            let newPassword =
+                prompt("Create your password:");
+
+
+            if (newPassword === null ||
+                newPassword === "") {
+
+                return;
+            }
+
+
+            localStorage.setItem(
+                "email",
+                newEmail
+            );
+
+            localStorage.setItem(
+                "password",
+                newPassword
+            );
+
+
+            let message =
+                document.getElementById("message");
+
+
+            message.textContent =
+                "Account created successfully!";
+
+            message.style.color =
+                "green";
+
+
+            document.getElementById("email").value =
+                newEmail;
+        }
+
+
+        function cancelLogin() {
+
+            document.getElementById("email").value =
+                "";
+
+            document.getElementById("password").value =
+                "";
+
+            document.getElementById("message").textContent =
+                "";
+        }
+
+    </script>
+
+</body>
+
+</html>
