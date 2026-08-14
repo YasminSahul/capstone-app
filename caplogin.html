@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Yashz Mart - Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yashz Mart</title>
+
     <link rel="stylesheet" href="capstyles.css">
 </head>
 
 <body>
 
-    <div class="login-container">
+    <!-- ================= LOGIN PAGE ================= -->
+
+    <div id="loginPage" class="login-container">
 
         <h1 class="shop-name">Yashz Mart</h1>
 
@@ -22,23 +28,35 @@
 
         <div class="login-form">
 
-            <label>Email ID:</label>
-            <input type="email" id="email" placeholder="Enter your email">
+            <label for="email">Email ID:</label>
 
-            <label>Password:</label>
-            <input type="password" id="password" placeholder="Enter your password">
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+            >
+
+            <label for="password">Password:</label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+            >
 
             <div class="button-group">
 
-                <button type="button"
-                        class="login-btn"
-                        onclick="login()">
+                <button
+                    type="button"
+                    class="login-btn"
+                    onclick="login()">
                     Login
                 </button>
 
-                <button type="button"
-                        class="cancel-btn"
-                        onclick="cancelLogin()">
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    onclick="cancelLogin()">
                     Cancel
                 </button>
 
@@ -54,139 +72,541 @@
             Don't have an account?
         </p>
 
-        <button type="button"
-                class="signin-btn"
-                onclick="signIn()">
+        <button
+            type="button"
+            class="signin-btn"
+            onclick="signIn()">
             Sign In
         </button>
 
     </div>
 
 
-    <script>
+    <!-- ================= PRODUCT PAGE ================= -->
 
-        function login() {
+    <div id="productPage" class="product-page">
 
-            let email =
-                document.getElementById("email").value;
+        <!-- HEADER -->
 
-            let password =
-                document.getElementById("password").value;
+        <header class="main-header">
 
-            let message =
-                document.getElementById("message");
+            <div>
+                <h1>Yashz Mart</h1>
 
+                <p>
+                    Your Trusted Online Watch Store
+                </p>
+            </div>
 
-            let savedEmail =
-                localStorage.getItem("email");
+            <button
+                class="logout-btn"
+                onclick="logout()">
+                Logout
+            </button>
 
-            let savedPassword =
-                localStorage.getItem("password");
-
-
-            if (savedEmail === null) {
-
-                savedEmail =
-                    "yasminss2107@gmail.com";
-
-                savedPassword =
-                    "12345";
-            }
+        </header>
 
 
-            if (email === savedEmail &&
-                password === savedPassword) {
+        <!-- CART -->
 
-                message.textContent =
-                    "Login Successful";
+        <section class="cart-container">
 
-                message.style.color =
-                    "green";
+            <h2>🛒 My Cart</h2>
 
+            <div id="cart-items">
 
-                setTimeout(function() {
+                <p>
+                    Your cart is empty.
+                </p>
 
-                    window.location.href =
-                        "capafterlogin.html";
+            </div>
 
-                }, 1000);
+            <div class="cart-bottom">
 
+                <h3 id="cart-total">
+                    Total: ₹0
+                </h3>
 
-            } else {
+                <button
+                    class="buy-cart-btn"
+                    onclick="buyCart()">
+                    Buy Now
+                </button>
 
-                message.textContent =
-                    "Login Failed";
+            </div>
 
-                message.style.color =
-                    "red";
-            }
-        }
-
-
-        function signIn() {
-
-            let newEmail =
-                prompt("Enter your email ID:");
+        </section>
 
 
-            if (newEmail === null ||
-                newEmail === "") {
+        <!-- PRODUCTS -->
 
-                return;
-            }
+        <section class="product-container">
 
 
-            let newPassword =
-                prompt("Create your password:");
+            <!-- PRODUCT 1 -->
+
+            <div class="product-card">
+
+                <img
+                    src="aaaa.png"
+                    alt="SAFEHER Watch"
+                >
+
+                <div class="product-details">
+
+                    <h2>SAFEHER Watch</h2>
+
+                    <p class="price">
+                        ₹599
+                    </p>
+
+                    <p class="description">
+                        Stylish and comfortable watch
+                        suitable for everyday use.
+                    </p>
+
+                    <ul>
+                        <li>Stylish design</li>
+                        <li>Comfortable strap</li>
+                        <li>Easy to use</li>
+                        <li>Durable body</li>
+                        <li>Suitable for daily use</li>
+                    </ul>
+
+                    <div class="product-buttons">
+
+                        <button
+                            class="buy-btn"
+                            onclick="addToCart('SAFEHER Watch', 599)">
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-now-btn"
+                            onclick="buyNow('SAFEHER Watch', 599)">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
 
 
-            if (newPassword === null ||
-                newPassword === "") {
+            <!-- PRODUCT 2 -->
 
-                return;
-            }
+            <div class="product-card">
+
+                <img
+                    src="smart watch.jpg"
+                    alt="Smart Watch"
+                >
+
+                <div class="product-details">
+
+                    <h2>Smart Watch</h2>
+
+                    <p class="price">
+                        ₹1,499
+                    </p>
+
+                    <p class="description">
+                        Modern smartwatch with useful
+                        smart features.
+                    </p>
+
+                    <ul>
+                        <li>Touch screen</li>
+                        <li>Fitness tracking</li>
+                        <li>Heart rate monitoring</li>
+                        <li>Bluetooth connectivity</li>
+                        <li>Long battery life</li>
+                    </ul>
+
+                    <div class="product-buttons">
+
+                        <button
+                            class="buy-btn"
+                            onclick="addToCart('Smart Watch', 1499)">
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-now-btn"
+                            onclick="buyNow('Smart Watch', 1499)">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
 
 
-            localStorage.setItem(
-                "email",
-                newEmail
-            );
+            <!-- PRODUCT 3 -->
 
-            localStorage.setItem(
-                "password",
-                newPassword
-            );
+            <div class="product-card">
+
+                <img
+                    src="digital.jpg"
+                    alt="Digital Watch"
+                >
+
+                <div class="product-details">
+
+                    <h2>Digital Watch</h2>
+
+                    <p class="price">
+                        ₹799
+                    </p>
+
+                    <p class="description">
+                        Simple digital watch with a clear
+                        display and comfortable design.
+                    </p>
+
+                    <ul>
+                        <li>Digital display</li>
+                        <li>Alarm function</li>
+                        <li>Stopwatch</li>
+                        <li>Water resistant</li>
+                        <li>Comfortable strap</li>
+                    </ul>
+
+                    <div class="product-buttons">
+
+                        <button
+                            class="buy-btn"
+                            onclick="addToCart('Digital Watch', 799)">
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-now-btn"
+                            onclick="buyNow('Digital Watch', 799)">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
 
 
-            let message =
-                document.getElementById("message");
+            <!-- PRODUCT 4 -->
+
+            <div class="product-card">
+
+                <img
+                    src="analog.jpg"
+                    alt="Analog Watch"
+                >
+
+                <div class="product-details">
+
+                    <h2>Analog Watch</h2>
+
+                    <p class="price">
+                        ₹999
+                    </p>
+
+                    <p class="description">
+                        Classic analog watch with an elegant
+                        design for everyday use.
+                    </p>
+
+                    <ul>
+                        <li>Classic analog display</li>
+                        <li>Elegant design</li>
+                        <li>Comfortable strap</li>
+                        <li>Durable body</li>
+                        <li>Formal wear</li>
+                    </ul>
+
+                    <div class="product-buttons">
+
+                        <button
+                            class="buy-btn"
+                            onclick="addToCart('Analog Watch', 999)">
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-now-btn"
+                            onclick="buyNow('Analog Watch', 999)">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
 
 
-            message.textContent =
-                "Account created successfully!";
+            <!-- PRODUCT 5 -->
 
-            message.style.color =
-                "green";
+            <div class="product-card">
+
+                <img
+                    src="rado.webp"
+                    alt="Rado Watch"
+                >
+
+                <div class="product-details">
+
+                    <h2>Rado Watch</h2>
+
+                    <p class="price">
+                        ₹25,999
+                    </p>
+
+                    <p class="description">
+                        Premium-style watch with an elegant
+                        and sophisticated appearance.
+                    </p>
+
+                    <ul>
+                        <li>Premium design</li>
+                        <li>Elegant appearance</li>
+                        <li>Durable construction</li>
+                        <li>Comfortable to wear</li>
+                        <li>Special occasions</li>
+                    </ul>
+
+                    <div class="product-buttons">
+
+                        <button
+                            class="buy-btn"
+                            onclick="addToCart('Rado Watch', 25999)">
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-now-btn"
+                            onclick="buyNow('Rado Watch', 25999)">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
 
 
-            document.getElementById("email").value =
-                newEmail;
-        }
+            <!-- PRODUCT 6 -->
+
+            <div class="product-card">
+
+                <img
+                    src="rolex.webp"
+                    alt="Rolex Watch"
+                >
+
+                <div class="product-details">
+
+                    <h2>Rolex Watch</h2>
+
+                    <p class="price">
+                        ₹35,999
+                    </p>
+
+                    <p class="description">
+                        Luxury-style watch with a
+                        sophisticated design.
+                    </p>
+
+                    <ul>
+                        <li>Luxury design</li>
+                        <li>Premium appearance</li>
+                        <li>Durable construction</li>
+                        <li>Elegant finish</li>
+                        <li>Formal occasions</li>
+                    </ul>
+
+                    <div class="product-buttons">
+
+                        <button
+                            class="buy-btn"
+                            onclick="addToCart('Rolex Watch', 35999)">
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-now-btn"
+                            onclick="buyNow('Rolex Watch', 35999)">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
 
 
-        function cancelLogin() {
+            <!-- PRODUCT 7 -->
 
-            document.getElementById("email").value =
-                "";
+            <div class="product-card">
 
-            document.getElementById("password").value =
-                "";
+                <img
+                    src="titan.webp"
+                    alt="Titan Watch"
+                >
 
-            document.getElementById("message").textContent =
-                "";
-        }
+                <div class="product-details">
 
-    </script>
+                    <h2>Titan Watch</h2>
+
+                    <p class="price">
+                        ₹2,499
+                    </p>
+
+                    <p class="description">
+                        Elegant everyday watch with a
+                        stylish and comfortable design.
+                    </p>
+
+                    <ul>
+                        <li>Elegant design</li>
+                        <li>Comfortable strap</li>
+                        <li>Clear dial</li>
+                        <li>Durable body</li>
+                        <li>Daily use</li>
+                    </ul>
+
+                    <div class="product-buttons">
+
+                        <button
+                            class="buy-btn"
+                            onclick="addToCart('Titan Watch', 2499)">
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-now-btn"
+                            onclick="buyNow('Titan Watch', 2499)">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 8 -->
+
+            <div class="product-card">
+
+                <img
+                    src="fossil.webp"
+                    alt="Fossil Watch"
+                >
+
+                <div class="product-details">
+
+                    <h2>Fossil Watch</h2>
+
+                    <p class="price">
+                        ₹5,999
+                    </p>
+
+                    <p class="description">
+                        Stylish fashion watch with a modern
+                        and premium-looking design.
+                    </p>
+
+                    <ul>
+                        <li>Modern design</li>
+                        <li>Premium finish</li>
+                        <li>Comfortable strap</li>
+                        <li>Durable body</li>
+                        <li>Casual wear</li>
+                    </ul>
+
+                    <div class="product-buttons">
+
+                        <button
+                            class="buy-btn"
+                            onclick="addToCart('Fossil Watch', 5999)">
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-now-btn"
+                            onclick="buyNow('Fossil Watch', 5999)">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 9 -->
+
+            <div class="product-card">
+
+                <img
+                    src="apple.webp"
+                    alt="Apple Watch"
+                >
+
+                <div class="product-details">
+
+                    <h2>Apple Watch</h2>
+
+                    <p class="price">
+                        ₹29,999
+                    </p>
+
+                    <p class="description">
+                        Modern smartwatch with a bright display
+                        and useful fitness features.
+                    </p>
+
+                    <ul>
+                        <li>Touch screen</li>
+                        <li>Fitness tracking</li>
+                        <li>Bluetooth connectivity</li>
+                        <li>Health features</li>
+                        <li>Smart notifications</li>
+                    </ul>
+
+                    <div class="product-buttons">
+
+                        <button
+                            class="buy-btn"
+                            onclick="addToCart('Apple Watch', 29999)">
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-now-btn"
+                            onclick="buyNow('Apple Watch', 29999)">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
 
 </body>
 
