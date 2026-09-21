@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Yashz Mart - Sign Up</title>
+
+    <link rel="stylesheet" href="capstyle.css">
+
+</head>
+
+<body class="auth-body">
+
+<div class="auth-box">
+
+    <div class="logo">
+        🛍️
+    </div>
+
+    <h1>Yashz Mart</h1>
+
+    <p class="welcome">
+        Create your Yashz Mart account
+    </p>
+
+    <h2>Sign Up</h2>
+
+    <form id="signinForm">
+
+        <label>Name</label>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required
+        >
+
+        <label>Email ID</label>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Create password"
+            required
+        >
+
+        <label>Confirm Password</label>
+
+        <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm password"
+            required
+        >
+
+        <label>Account Type</label>
+
+        <select id="role" required>
+
+            <option value="BUYER">
+                Buyer
+            </option>
+
+            <option value="SELLER">
+                Seller
+            </option>
+
+        </select>
+
+        <button
+            type="submit"
+            class="primary-button full"
+        >
+            Create Account
+        </button>
+
+    </form>
+
+    <p
+        id="signin-message"
+        class="message"
+    ></p>
+
+    <a
+        href="caplogin.html"
+        class="back-login"
+    >
+        Back to Login
+    </a>
+
+</div>
+
+<script src="capscript.js"></script>
+
+</body>
+</html>
