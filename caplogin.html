@@ -1,87 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Yashz Mart - Login</title>
+
     <link rel="stylesheet" href="capstyle.css">
 </head>
 
-<body class="auth-body">
+<body>
 
-<div class="auth-box">
+    <div class="login-container">
 
-    <div class="logo">🛍️</div>
+        <div class="login-box">
 
-    <h1>Yashz Mart</h1>
-    <p class="welcome">Login to your marketplace</p>
+            <h1>Yashz Mart</h1>
 
-    <h2>Login</h2>
+            <p class="subtitle">
+                Your Customized Shopping Marketplace
+            </p>
 
-    <form id="loginForm">
+            <h2>Login</h2>
 
-        <label>Email ID</label>
-        <input
-            type="email"
-            id="loginEmail"
-            placeholder="Enter your email"
-            required
-        >
+            <form id="loginForm">
 
-        <label>Password</label>
-        <input
-            type="password"
-            id="loginPassword"
-            placeholder="Enter your password"
-            required
-        >
+                <label for="loginEmail">
+                    Email
+                </label>
 
-        <label>Login As</label>
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Enter your email"
+                    required
+                >
 
-        <select id="loginRole" required>
-            <option value="BUYER">Buyer</option>
-            <option value="SELLER">Seller</option>
-        </select>
+                <label for="loginPassword">
+                    Password
+                </label>
 
-        <div class="button-row">
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter your password"
+                    required
+                >
 
-            <button
-                type="submit"
-                class="primary-button"
-            >
-                Login
-            </button>
+                <button type="submit" class="primary-btn">
+                    Login
+                </button>
 
-            <button
-                type="button"
-                class="cancel-button"
-                onclick="document.getElementById('loginForm').reset()"
-            >
-                Cancel
-            </button>
+            </form>
+
+            <p id="loginMessage"></p>
+
+            <div class="login-links">
+
+                <p>
+                    Don't have an account?
+                </p>
+
+                <a href="capsignin.html">
+                    Create Account
+                </a>
+
+            </div>
 
         </div>
 
-    </form>
+    </div>
 
-    <p id="loginMessage" class="message"></p>
-
-    <div class="or">OR</div>
-
-    <p class="account-text">
-        Don't have an account?
-    </p>
-
-    <button
-        class="primary-button full"
-        onclick="location.href='capsignin.html'"
-    >
-        Create Account
-    </button>
-
-</div>
-
-<script src="capscript.js"></script>
+    <script src="capscript.js"></script>
 
 </body>
+
 </html>
