@@ -18,706 +18,124 @@
 
 <body>
 
-<header class="top-header">
+    <header class="main-header">
 
-    <div class="brand">
-
-        <div class="brand-icon">
-            🛍️
+        <div class="logo">
+            Yashz Mart
         </div>
 
-        <div>
+        <div class="header-buttons">
 
-            <h1>Yashz Mart</h1>
-
-            <p>
-                Everything you need, in one place
-            </p>
-
-        </div>
-
-    </div>
-
-    <div class="user-area">
-
-        <span id="userBadge"></span>
-
-        <button
-            id="cartButton"
-            class="header-button"
-        >
-            🛒 Cart
-            <span id="cartCount">0</span>
-        </button>
-
-        <button
-            id="sellerButton"
-            class="header-button hidden"
-        >
-            🏪 Seller
-        </button>
-
-        <button
-            id="settingsButton"
-            class="header-button"
-        >
-            ⚙️
-        </button>
-
-    </div>
-
-</header>
-
-
-<main>
-
-<section class="search-section">
-
-    <div class="search-row">
-
-        <input
-            id="searchInput"
-            type="text"
-            placeholder="Search Anarkali Kurti, football, teddy bear..."
-        >
-
-        <button
-            id="searchButton"
-            class="primary-button"
-        >
-            🔍 Search
-        </button>
-
-    </div>
-
-
-    <div class="category-row">
-
-        <button
-            class="category-btn active"
-            data-category="All"
-        >
-            🏠 All
-        </button>
-
-        <button
-            class="category-btn"
-            data-category="Sports"
-        >
-            ⚽ Sports
-        </button>
-
-        <button
-            class="category-btn"
-            data-category="Women"
-        >
-            👗 Women
-        </button>
-
-        <button
-            class="category-btn"
-            data-category="Men"
-        >
-            👔 Men
-        </button>
-
-        <button
-            class="category-btn"
-            data-category="Kids"
-        >
-            🧒 Kids
-        </button>
-
-        <button
-            class="category-btn"
-            data-category="Toys & Gifts"
-        >
-            🎁 Toys & Gifts
-        </button>
-
-        <button
-            class="category-btn"
-            data-category="Accessories"
-        >
-            💎 Accessories
-        </button>
-
-    </div>
-
-
-    <div class="filter-container">
-
-        <button
-            id="filterToggle"
-            class="filter-button"
-        >
-            ☰ Filter
-        </button>
-
-        <div
-            id="filterPanel"
-            class="filter-panel hidden"
-        >
-
-            <div class="filter-item">
-
-                <label>Delivery</label>
-
-                <select id="deliveryFilter">
-
-                    <option value="all">All</option>
-                    <option value="free">Free Delivery</option>
-                    <option value="paid">Paid Delivery</option>
-
-                </select>
-
-            </div>
-
-
-            <div class="filter-item">
-
-                <label>Delivery Time</label>
-
-                <select id="deliveryTimeFilter">
-
-                    <option value="all">
-                        Any time
-                    </option>
-
-                    <option value="1-2">
-                        1–2 Days
-                    </option>
-
-                    <option value="3-5">
-                        3–5 Days
-                    </option>
-
-                    <option value="5-7">
-                        5–7 Days
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <div class="filter-item">
-
-                <label>Color</label>
-
-                <select id="colorFilter">
-
-                    <option value="all">
-                        All Colors
-                    </option>
-
-                    <option value="black">Black</option>
-                    <option value="white">White</option>
-                    <option value="blue">Blue</option>
-                    <option value="red">Red</option>
-                    <option value="pink">Pink</option>
-                    <option value="green">Green</option>
-                    <option value="yellow">Yellow</option>
-                    <option value="purple">Purple</option>
-
-                </select>
-
-            </div>
-
-
-            <div class="filter-item">
-
-                <label>Price</label>
-
-                <select id="priceFilter">
-
-                    <option value="all">
-                        All Prices
-                    </option>
-
-                    <option value="0-500">
-                        Below ₹500
-                    </option>
-
-                    <option value="500-1000">
-                        ₹500–₹1,000
-                    </option>
-
-                    <option value="1000-2500">
-                        ₹1,000–₹2,500
-                    </option>
-
-                    <option value="2500-5000">
-                        ₹2,500–₹5,000
-                    </option>
-
-                    <option value="5000">
-                        Above ₹5,000
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <div class="filter-item">
-
-                <label>Rating</label>
-
-                <select id="ratingFilter">
-
-                    <option value="all">
-                        All Ratings
-                    </option>
-
-                    <option value="4">
-                        4★ and above
-                    </option>
-
-                    <option value="4.5">
-                        4.5★ and above
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <div class="filter-check">
-
-                <label>
-
-                    <input
-                        type="checkbox"
-                        id="trustedFilter"
-                    >
-
-                    Yashz Trusted
-
-                </label>
-
-            </div>
-
-
-            <div class="filter-check">
-
-                <label>
-
-                    <input
-                        type="checkbox"
-                        id="customFilter"
-                    >
-
-                    Customizable
-
-                </label>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="products-section">
-
-    <div class="section-heading">
-
-        <div>
-
-            <h2 id="sectionTitle">
-                Our Products
-            </h2>
-
-            <p id="sectionSubtitle">
-                Real products from Yashz Mart
-            </p>
-
-        </div>
-
-        <span id="productCount">
-            0 products
-        </span>
-
-    </div>
-
-
-    <div
-        id="productGrid"
-        class="product-grid"
-    ></div>
-
-</section>
-
-</main>
-
-
-<!-- PRODUCT DETAILS -->
-
-<div
-    id="productModal"
-    class="modal hidden"
->
-
-    <div class="modal-content">
-
-        <button
-            class="close-button"
-            onclick="closeProductModal()"
-        >
-            ✕
-        </button>
-
-        <div id="productDetails"></div>
-
-    </div>
-
-</div>
-
-
-<!-- CART -->
-
-<div
-    id="cartModal"
-    class="modal hidden"
->
-
-    <div class="modal-content">
-
-        <button
-            class="close-button"
-            onclick="closeCart()"
-        >
-            ✕
-        </button>
-
-        <h2>🛒 My Cart</h2>
-
-        <div id="cartItems"></div>
-
-        <div class="cart-total">
-
-            Total: ₹
-            <span id="cartTotal">0</span>
-
-        </div>
-
-        <button
-            id="cartBuyButton"
-            class="primary-button full"
-        >
-            Buy Now
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- PAYMENT -->
-
-<div
-    id="paymentModal"
-    class="modal hidden"
->
-
-    <div class="modal-content">
-
-        <button
-            class="close-button"
-            onclick="closePayment()"
-        >
-            ✕
-        </button>
-
-        <h2>
-            Choose Payment Method
-        </h2>
-
-        <label class="payment-option">
-
-            <input
-                type="radio"
-                name="payment"
-                value="gpay"
-            >
-
-            📱 GPay / UPI
-
-        </label>
-
-
-        <label class="payment-option">
-
-            <input
-                type="radio"
-                name="payment"
-                value="cod"
-            >
-
-            💵 Cash on Delivery
-
-        </label>
-
-
-        <div
-            id="gpayForm"
-            class="hidden"
-        >
-
-            <input
-                id="upiNumber"
-                placeholder="Demo UPI ID"
-            >
-
-            <input
-                id="paymentPin"
-                type="password"
-                placeholder="Demo PIN"
-            >
-
-        </div>
-
-
-        <button
-            id="proceedPayment"
-            class="primary-button full"
-        >
-            Proceed
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- SUCCESS -->
-
-<div
-    id="successModal"
-    class="modal hidden"
->
-
-    <div class="success-page">
-
-        <div class="success-icon">
-            ✓
-        </div>
-
-        <h1>
-            Thank You!
-        </h1>
-
-        <h2 id="successTitle"></h2>
-
-        <p id="successMessage"></p>
-
-        <button
-            class="primary-button"
-            onclick="closeSuccess()"
-        >
-            Continue Shopping
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- CUSTOMIZATION -->
-
-<div
-    id="customModal"
-    class="modal hidden"
->
-
-    <div class="modal-content">
-
-        <button
-            class="close-button"
-            onclick="closeCustomModal()"
-        >
-            ✕
-        </button>
-
-        <h2>
-            🎨 Customize Product
-        </h2>
-
-        <p id="customProductName"></p>
-
-        <textarea
-            id="customRequest"
-            placeholder="Describe your customization request..."
-        ></textarea>
-
-        <button
-            id="sendCustomRequest"
-            class="primary-button full"
-        >
-            Send Request
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- SETTINGS -->
-
-<div
-    id="settingsModal"
-    class="modal hidden"
->
-
-    <div class="modal-content">
-
-        <button
-            class="close-button"
-            onclick="closeSettings()"
-        >
-            ✕
-        </button>
-
-        <h2>⚙️ Settings</h2>
-
-        <p id="settingsText"></p>
-
-        <button
-            id="logoutButton"
-            class="danger-button"
-        >
-            Logout
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- SELLER -->
-
-<div
-    id="sellerModal"
-    class="modal hidden"
->
-
-    <div class="modal-content">
-
-        <button
-            class="close-button"
-            onclick="closeSeller()"
-        >
-            ✕
-        </button>
-
-        <h2>
-            🏪 Seller Dashboard
-        </h2>
-
-        <p>
-            Add your own product to Yashz Mart.
-        </p>
-
-        <form id="sellerForm">
-
-            <input
-                id="sellerProductName"
-                placeholder="Product name"
-                required
-            >
-
-            <select id="sellerCategory">
-
-                <option>Women</option>
-                <option>Men</option>
-                <option>Kids</option>
-                <option>Sports</option>
-                <option>Toys & Gifts</option>
-                <option>Accessories</option>
-
-            </select>
-
-            <select id="sellerType">
-
-                <option value="tshirt">T-Shirt</option>
-                <option value="shirt">Shirt</option>
-                <option value="kurti">Kurti</option>
-                <option value="jeans">Jeans</option>
-                <option value="dress">Dress</option>
-                <option value="pants">Pants</option>
-                <option value="shoe">Shoes</option>
-                <option value="slipper">Slippers</option>
-                <option value="football">Football</option>
-                <option value="basketball">Basketball</option>
-                <option value="volleyball">Volleyball</option>
-                <option value="teddy">Teddy Bear</option>
-                <option value="watch">Watch</option>
-                <option value="bag">Bag</option>
-                <option value="chain">Chain</option>
-                <option value="gift">Gift</option>
-
-            </select>
-
-            <input
-                id="sellerPrice"
-                type="number"
-                placeholder="Price ₹"
-                required
-            >
-
-            <select id="sellerColor">
-
-                <option>black</option>
-                <option>white</option>
-                <option>blue</option>
-                <option>red</option>
-                <option>pink</option>
-                <option>green</option>
-                <option>yellow</option>
-                <option>purple</option>
-
-            </select>
-
-            <input
-                id="sellerDescription"
-                placeholder="Product description"
-                required
-            >
-
-            <label>
-
-                <input
-                    type="checkbox"
-                    id="sellerCustom"
-                >
-
-                Customizable
-
-            </label>
-
-            <button
-                type="submit"
-                class="primary-button full"
-            >
-                Add Product
+            <button id="cartButton">
+                🛒 Cart
             </button>
 
-        </form>
+            <button id="settingsButton">
+                ⚙ Settings
+            </button>
 
-        <p
-            id="sellerMessage"
-            class="message"
-        ></p>
+        </div>
 
-    </div>
-
-</div>
+    </header>
 
 
-<script src="capscript.js"></script>
+    <section class="welcome-section">
+
+        <h1>Yashz Mart Marketplace</h1>
+
+        <p>
+            Customized products for everyone
+        </p>
+
+    </section>
+
+
+    <section class="search-section">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+        >
+
+        <button id="searchButton">
+            Search
+        </button>
+
+    </section>
+
+
+    <section class="categories">
+
+        <button class="category-btn">
+            All
+        </button>
+
+        <button class="category-btn">
+            Sports
+        </button>
+
+        <button class="category-btn">
+            Women
+        </button>
+
+        <button class="category-btn">
+            Men
+        </button>
+
+        <button class="category-btn">
+            Kids
+        </button>
+
+        <button class="category-btn">
+            Toys & Gifts
+        </button>
+
+        <button class="category-btn">
+            Accessories
+        </button>
+
+    </section>
+
+
+    <main class="products-section">
+
+        <h2>
+            Products
+        </h2>
+
+        <div
+            id="productGrid"
+            class="product-grid"
+        >
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    🛍️
+                </div>
+
+                <h3>
+                    Sample Product
+                </h3>
+
+                <p>
+                    ₹499
+                </p>
+
+                <button>
+                    View
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="capscript.js"></script>
 
 </body>
+
 </html>
