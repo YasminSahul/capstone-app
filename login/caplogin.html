@@ -1,79 +1,54 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Yashz Mart - Login</title>
-
     <link rel="stylesheet" href="capstyle.css">
 </head>
+<body class="auth-page">
 
-<body>
+    <main class="auth-card">
+        <div class="logo">🛍️</div>
+        <h1>Yashz Mart</h1>
+        <p class="subtitle">Everything you need, in one place</p>
 
-    <div class="login-container">
+        <h2>Welcome Back!</h2>
+        <p class="muted">Log in to continue shopping or selling.</p>
 
-        <div class="login-box">
+        <form id="loginForm">
+            <label for="loginEmail">Email ID</label>
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Enter your registered email"
+                autocomplete="username"
+                required
+            >
 
-            <h1>Yashz Mart</h1>
+            <label for="loginPassword">Password</label>
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+            >
 
-            <p class="subtitle">
-                Your Customized Shopping Marketplace
-            </p>
+            <button type="submit" class="primary-btn">
+                Login
+            </button>
+        </form>
 
-            <h2>Login</h2>
+        <p id="loginMessage" class="message" role="status"></p>
 
-            <form id="loginForm">
-
-                <label for="loginEmail">
-                    Email
-                </label>
-
-                <input
-                    type="email"
-                    id="loginEmail"
-                    placeholder="Enter your email"
-                    required
-                >
-
-                <label for="loginPassword">
-                    Password
-                </label>
-
-                <input
-                    type="password"
-                    id="loginPassword"
-                    placeholder="Enter your password"
-                    required
-                >
-
-                <button type="submit" class="primary-btn">
-                    Login
-                </button>
-
-            </form>
-
-            <p id="loginMessage"></p>
-
-            <div class="login-links">
-
-                <p>
-                    Don't have an account?
-                </p>
-
-                <a href="capsignin.html">
-                    Create Account
-                </a>
-
-            </div>
-
+        <div class="auth-footer">
+            <p>Don't have an account?</p>
+            <a href="capsignin.html">Create an account</a>
         </div>
-
-    </div>
+    </main>
 
     <script src="capscript.js"></script>
-
 </body>
-
 </html>
